@@ -8,3 +8,6 @@
 - Базы данных: PostgreSQL, SQLAlchemy
 - DevOps и инфраструктура: Docker, CI/CD, Nginx
 - API и интеграции: REST API, Celery, JWT, OAuth2
+
+Контакт для связи
+https://t.me/crashkkm
