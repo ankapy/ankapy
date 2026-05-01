@@ -128,12 +128,22 @@ L_\lambda = \tau \cdot \varepsilon \cdot B(T_s) + L_u + \tau \cdot (1 - \varepsi
 $$
 
 где:
-- $L_\lambda$ — спектральная яркость на датчике, Вт·м⁻²·ср⁻¹·мкм⁻¹
-- $\tau$ — пропускание атмосферы
-- $\varepsilon$ — излучательная способность поверхности
-- $B(T_s)$ — функция Планка при температуре поверхности $T_s$
-- $L_u$ — Downwelling Radiance
-- $L_d$ — Upwelling Radiance
+$L_\lambda$ — спектральная яркость на датчике, Вт·м⁻²·ср⁻¹·мкм⁻¹
+$\tau$ — пропускание атмосферы
+$\varepsilon$ — излучательная способность поверхности
+$B(T_s)$ — функция Планка при температуре поверхности $T_s$
+$L_u$ — Downwelling Radiance
+$L_d$ — Upwelling Radiance
+
+Скрипт предоставляет готовые $\tau$, $L_u$, $L_d$, которые можно использовать далее для расчёта Ts (LST).
+
+5. **Сохранение результатов**  
+	По завершении расчётов для каждой сцены в папке `./output` генерируется детальный текстовый отчёт (формат имени: `atm_params_YYYY-MM-DD_Источник.txt`), содержащий все входные параметры, источник погодных данных, границы интерполяции LUT и итоговые значения. Дополнительно формируется сводная таблица `batch_results.csv` с разделителем `;`, готовая для прямого импорта в Excel или статистической обработки.
+
+## Источники данных и методы
+1. Barsi J.A., Schott J.R., Hook S.J., et al. Landsat-8 Thermal Infrared Sensor (TIRS) Vicarious Radiometric Calibration // Remote Sensing. 2014. V. 6. № 11. P. 11607–11626. DOI: 10.3390/rs61111607
+2. U.S. Geological Survey. Landsat Collection 2 Surface Temperature Algorithm Theoretical Basis Document. 2021. URL: https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-temperature (дата обращения: 01.05.2026).
+
 
 Скрипт предоставляет готовые $\tau$, $L_u$, $L_d$, которые можно использовать далее для расчёта Ts (LST).
 
